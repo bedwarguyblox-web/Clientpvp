@@ -11,11 +11,22 @@ workflows:
       - name: Set Android SDK location
         script: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
 
+      - name: Check environment
+        script: |
+          echo "=== Java version ==="
+          java -version
+          echo "=== Gradle wrapper version ==="
+          ./gradlew --version || echo "WRAPPER FAILED"
+          echo "=== Directory contents ==="
+          ls -la
+          echo "=== Android SDK ==="
+          echo $ANDROID_SDK_ROOT
+          ls $ANDROID_SDK_ROOT/build-tools/ 2>/dev/null || echo "No build-tools found"
+
       - name: Build debug APK
         script: |
-          set -o pipefail
           export GRADLE_OPTS="-Xmx2048m -Dfile.encoding=UTF-8"
-          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log || (cat build.log && exit 1)
     artifacts:
       - app/build/outputs/apk/debug/*.apk
       - build.log
