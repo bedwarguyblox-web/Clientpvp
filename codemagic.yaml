@@ -13,10 +13,12 @@ workflows:
 
       - name: Build debug APK
         script: |
+          set -o pipefail
           export GRADLE_OPTS="-Xmx2048m -Dfile.encoding=UTF-8"
-          ./gradlew assembleDebug --no-daemon --info 2>&1 | tail -150
+          ./gradlew assembleDebug --no-daemon --stacktrace 2>&1 | tee build.log
     artifacts:
       - app/build/outputs/apk/debug/*.apk
+      - build.log
     publishing:
       email:
         recipients:
