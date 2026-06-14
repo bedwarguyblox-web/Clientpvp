@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+        Shell theme used by the system window before Compose renders.
+        The actual design system is applied in DSMPTheme.kt.
+    -->
+    <style name="Theme.DSMPPvPClient" parent="android:Theme.Material.NoTitleBar">
+        <!-- True black window background keeps the splash AMOLED-clean -->
+        <item name="android:windowBackground">@color/cosmic_black</item>
+        <item name="android:statusBarColor">@color/cosmic_black</item>
+        <item name="android:navigationBarColor">@color/cosmic_black</item>
+        <item name="android:windowLightStatusBar">false</item>
+        <item name="android:windowLightNavigationBar">false</item>
+    </style>
+</resources>

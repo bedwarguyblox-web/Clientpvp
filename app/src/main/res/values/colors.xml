@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Core brand colours (also defined in Color.kt for Compose) -->
+    <color name="cosmic_black">#FF000000</color>
+    <color name="surface_dark">#FF111111</color>
+    <color name="surface_card">#FF1A1A1A</color>
+    <color name="emerald">#FF00E676</color>
+    <color name="emerald_dark">#FF00B248</color>
+    <color name="accent_red">#FFFF4444</color>
+    <color name="accent_blue">#FF448AFF</color>
+    <color name="on_surface">#FFEEEEEE</color>
+    <color name="on_surface_secondary">#FFAAAAAA</color>
+</resources>

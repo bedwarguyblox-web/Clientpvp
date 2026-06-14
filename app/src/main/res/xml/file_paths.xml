@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+  FileProvider paths used when sharing resource-pack files
+  with Minecraft or other apps.
+-->
+<paths>
+    <!-- Internal resource packs directory -->
+    <files-path
+        name="resource_packs"
+        path="resource_packs/" />
+
+    <!-- External downloads / imports -->
+    <external-files-path
+        name="external_files"
+        path="." />
+
+    <!-- Cache for temporary previews -->
+    <cache-path
+        name="cache"
+        path="." />
+</paths>

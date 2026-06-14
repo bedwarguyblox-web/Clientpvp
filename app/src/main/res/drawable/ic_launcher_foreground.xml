@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- DSMP PvP Client launcher icon — shield shape with emerald fill -->
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="108dp"
+    android:height="108dp"
+    android:viewportWidth="108"
+    android:viewportHeight="108">
+    <!-- Shield body -->
+    <path
+        android:fillColor="#00E676"
+        android:pathData="M54,20 L80,30 L80,58 C80,72 54,88 54,88 C54,88 28,72 28,58 L28,30 Z" />
+    <!-- Inner highlight -->
+    <path
+        android:fillColor="#69FFAA"
+        android:pathData="M54,30 L70,38 L70,58 C70,67 54,78 54,78 C54,78 38,67 38,58 L38,38 Z"
+        android:fillAlpha="0.35" />
+    <!-- Sword silhouette -->
+    <path
+        android:fillColor="#000000"
+        android:pathData="M51,40 L57,40 L57,68 L54,72 L51,68 Z"
+        android:fillAlpha="0.8" />
+    <path
+        android:fillColor="#000000"
+        android:pathData="M44,50 L64,50 L64,54 L44,54 Z"
+        android:fillAlpha="0.8" />
+</vector>
