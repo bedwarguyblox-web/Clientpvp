@@ -7,14 +7,20 @@ workflows:
     scripts:
       - name: Grant Gradle wrapper execute permission
         script: chmod +x gradlew
+
+      - name: Set Android SDK location
+        script: echo "sdk.dir=$ANDROID_SDK_ROOT" > local.properties
+
       - name: Build debug APK
-        script: ./gradlew assembleDebug --stacktrace
+        script: |
+          export GRADLE_OPTS="-Xmx2048m -Dfile.encoding=UTF-8"
+          ./gradlew assembleDebug --no-daemon --info 2>&1 | tail -150
     artifacts:
       - app/build/outputs/apk/debug/*.apk
     publishing:
       email:
         recipients:
-          - your@email.com
+          - bedwarguyblox@gmail.com
         notify:
           success: true
           failure: true
